@@ -1,18 +1,27 @@
-.vaga {
+import styled from 'styled-components'
+
+export const VagaLi = styled.li`
   border: 1px solid var(--cor-principal);
   background-color: var(--cor-secundaria);
   color: var(--cor-principal);
   padding: 16px;
   transition: all ease 0.3s;
   border-radius: 8px;
-}
-
-.vagaTitulo {
+  &:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+  }
+  &:hover a {
+    border-color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+  }
+`
+export const VagaTitulo = styled.h3`
   font-weight: bold;
   margin-bottom: 16px;
-}
-
-.vagaLink {
+`
+export const VagaLink = styled.a`
   border-color: var(--cor-secundaria);
   background-color: var(--cor-principal);
   color: var(--cor-secundaria);
@@ -24,19 +33,7 @@
   font-size: 14px;
   border-radius: 8px;
   text-align: center;
-
   @media (max-width: 768px) {
     display: block;
   }
-}
-
-.vaga:hover {
-  background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
-}
-
-.vaga:hover a {
-  border-color: var(--cor-principal);
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
-}
+`
